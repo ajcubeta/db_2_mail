@@ -1,0 +1,27 @@
+development:
+  adapter: postgresql
+  database: db_2_mail_dev
+  pool: 5
+  username: tech3
+  password: tech3
+  host: localhost
+
+test: &test
+  adapter: postgresql
+  database: db_2_mail_test
+  pool: 5
+  username: tech3
+  password: tech3
+  host: localhost
+
+production:
+  adapter: postgresql
+  database: db_2_mail_prod
+  pool: 5
+  username: postgres
+  password: postgres
+  template: template0
+  host: localhost
+
+cucumber:
+  <<: *test
