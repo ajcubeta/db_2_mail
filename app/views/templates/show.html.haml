@@ -7,7 +7,7 @@
 
   %tr
     %td= @template.title
-    %td= @template.body
+    %td= @template.replace_body_attributes(@user).html_safe
 
 = link_to 'Edit', edit_template_path(@template)
 \|

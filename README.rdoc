@@ -1,1 +1,6 @@
-== Welcome to Rails
+== Welcome to DB2Mail
+
+It's a sample app using Postgres and Rails Scaffold
+
+The goals is to save template to the database and retrieve the template
+on the Mailer replacing some user attributes before sending to mailers.

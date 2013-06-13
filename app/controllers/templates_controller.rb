@@ -3,6 +3,7 @@ class TemplatesController < ApplicationController
   # GET /templates.json
   def index
     @templates = Template.all
+    @user = User.first
 
     respond_to do |format|
       format.html # index.html.erb
@@ -14,6 +15,7 @@ class TemplatesController < ApplicationController
   # GET /templates/1.json
   def show
     @template = Template.find(params[:id])
+    @user = User.first
 
     respond_to do |format|
       format.html # show.html.erb

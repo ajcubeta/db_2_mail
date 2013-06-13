@@ -9,7 +9,7 @@
   - @templates.each do |template|
     %tr
       %td= template.title
-      %td= template.body
+      %td= template.replace_body_attributes(@user).html_safe
       %td= link_to 'Show', template
       %td= link_to 'Edit', edit_template_path(template)
       %td= link_to 'Destroy', template, :method => :delete, :data => { :confirm => 'Are you sure?' }
