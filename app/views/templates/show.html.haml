@@ -1,0 +1,14 @@
+%p#notice= notice
+
+%table
+  %tr
+    %th Title
+    %th Body
+
+  %tr
+    %td= @template.title
+    %td= @template.body
+
+= link_to 'Edit', edit_template_path(@template)
+\|
+= link_to 'Back', templates_path

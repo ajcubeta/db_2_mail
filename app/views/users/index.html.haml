@@ -1,13 +1,14 @@
-%h1 Listing users
+%h1 Listing Users
 
 %table
   %tr
+    %th Full Name
     %th Email
-    %th
     %th
 
   - @users.each do |user|
     %tr
+      %td= "#{user.first_name} #{user.last_name}"
       %td= user.email
       %td= link_to 'Show', user
       %td= link_to 'Edit', edit_user_path(user)
@@ -15,4 +16,6 @@
 
 %br
 
-= link_to 'New User', new_user_path
+= link_to 'Create New User', new_user_path
+|
+= link_to 'Go back to Dashboard', root_path

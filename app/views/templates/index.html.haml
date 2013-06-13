@@ -1,0 +1,21 @@
+%h1 Listing Templates
+
+%table
+  %tr
+    %th Title
+    %th Body
+    %th
+
+  - @templates.each do |template|
+    %tr
+      %td= template.title
+      %td= template.body
+      %td= link_to 'Show', template
+      %td= link_to 'Edit', edit_template_path(template)
+      %td= link_to 'Destroy', template, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'Create New Template', new_template_path
+|
+= link_to 'Go back to Dashboard', root_path
